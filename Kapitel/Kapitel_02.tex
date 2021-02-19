@@ -1,0 +1,41 @@
+\chapter{Titel på kapitel 2}
+
+\section{Bilder}
+
+Bilder inkluderas enligt följande
+
+\begin{figure}[h!] %the option h! forces the figure in this position
+    \centering
+    \includegraphics{example_figure.jpeg}
+    \caption{Skriv bildtexten här}
+    \label{fig:example_figure}
+\end{figure}
+
+och refereras i texten så här: figur \ref{fig:example_figure}.
+Spara alla bilder i mappen ``Bilder''.
+
+\section{Tabeller}
+
+Tabeller skapas enligt följande
+
+\begin{table}[t]
+\caption{Skriv tabelltexten här}. 
+\label{tab:example_table}
+\begin{tabu} to\linewidth{ X[2,l] | X[1,l] X[1,c] X[1,r] }
+    \toprule 
+    Kolumn 1 har dubbel bredd & Kolumn 2 är vänsterjusterad & Kolumn 3 är centrerad & Kolumn 4 är högerjusterad \\
+    \midrule 
+    Värde & Värde & Värde & Värde \\
+    \hline
+    Värde & Värde & Värde & Värde \\
+    \hline
+    Värde & Värde & Värde & Värde \\
+    \hline
+    Värde & \multicolumn3{l}{Så här skriver du på flera kolumner}\\
+    \hline
+    Värde & \multicolumn3{r}{och ändrar justering}\\
+    \bottomrule
+\end{tabu}
+\end{table}
+
+och refereras i texten så här: tabell \ref{tab:example_table}
